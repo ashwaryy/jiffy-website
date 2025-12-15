@@ -1,10 +1,12 @@
 @import "tailwindcss";
 
 :root {
-  /* Design System Colors */
-  --jiffy-primary: #F4A460;
-  --jiffy-secondary: #8B4513;
-  --jiffy-background: #FFF8DC;
+  /* Premium Design System Colors */
+  --jiffy-primary: #ea580c; /* Sharper Orange (Orange-600) for pop */
+  --jiffy-accent: #facc15; /* Yellow (Yellow-400) for highlights */
+  --jiffy-secondary: #0f172a; /* Slate-900 for sharp, premium text */
+  --jiffy-background: #ffffff; /* Clean White */
+  --jiffy-surface: #f8fafc; /* Slate-50 for subtle backgrounds */
   
   /* Semantic mappings */
   --background: var(--jiffy-background);
@@ -16,6 +18,8 @@
   --color-foreground: var(--foreground);
   --color-primary: var(--jiffy-primary);
   --color-secondary: var(--jiffy-secondary);
+  --color-surface: var(--jiffy-surface);
+  --color-accent: var(--jiffy-accent);
   --font-sans: var(--font-dm-sans);
 }
 

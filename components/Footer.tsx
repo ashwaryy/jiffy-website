@@ -10,14 +10,14 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-[#FFF8DC] border-t border-[#8B4513]/10 py-12 mt-auto">
+    <footer className="bg-surface border-t border-slate-100 py-12 mt-auto">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-1">
-            <Link href="/" className="text-2xl font-bold text-secondary mb-4 block">
+            <Link href="/" className="text-2xl font-bold text-secondary mb-4 block tracking-tight">
               Jiffy
             </Link>
-            <p className="text-secondary/80 text-sm">
+            <p className="text-slate-500 text-sm leading-relaxed">
               Your Institution's Knowledge Agent.
               <br />
               Built by{" "}
@@ -25,7 +25,7 @@ export default function Footer() {
                 href="https://goodfaithlabs.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="font-semibold hover:underline"
+                className="font-semibold text-secondary hover:text-primary transition-colors"
               >
                 Good Faith Labs
               </a>
@@ -33,11 +33,11 @@ export default function Footer() {
           </div>
 
           <div className="col-span-1 md:col-span-2">
-            <h3 className="text-secondary font-semibold mb-4">Navigation</h3>
-            <ul className="space-y-2">
+            <h3 className="text-secondary font-semibold mb-4 text-sm uppercase tracking-wider">Navigation</h3>
+            <ul className="space-y-3">
               {links.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-secondary/80 hover:text-primary transition-colors">
+                  <Link href={link.href} className="text-slate-500 hover:text-primary transition-colors text-sm">
                     {link.label}
                   </Link>
                 </li>
@@ -46,19 +46,19 @@ export default function Footer() {
           </div>
 
           <div className="col-span-1">
-            <h3 className="text-secondary font-semibold mb-4">Legal</h3>
-            <ul className="space-y-2">
+            <h3 className="text-secondary font-semibold mb-4 text-sm uppercase tracking-wider">Legal</h3>
+            <ul className="space-y-3">
               <li>
-                <span className="text-secondary/60 cursor-not-allowed">Privacy Policy</span>
+                <span className="text-slate-400 text-sm cursor-not-allowed">Privacy Policy</span>
               </li>
               <li>
-                <span className="text-secondary/60 cursor-not-allowed">Terms of Service</span>
+                <span className="text-slate-400 text-sm cursor-not-allowed">Terms of Service</span>
               </li>
             </ul>
           </div>
         </div>
         
-        <div className="mt-8 pt-8 border-t border-[#8B4513]/10 text-center text-sm text-secondary/60">
+        <div className="mt-12 pt-8 border-t border-slate-200 text-center text-sm text-slate-400">
           &copy; {new Date().getFullYear()} Jiffy. All rights reserved.
         </div>
       </div>

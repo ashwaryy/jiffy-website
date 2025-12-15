@@ -10,11 +10,11 @@ export default function Header() {
   ];
 
   return (
-    <header className="fixed top-0 w-full z-50 bg-[#FFF8DC]/90 backdrop-blur-sm border-b border-[#8B4513]/10">
+    <header className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
-          <div className="flex-shrink-0">
-            <Link href="/" className="text-2xl font-bold text-secondary">
+          <div className="flex-shrink-0 flex items-center gap-2">
+            <Link href="/" className="text-2xl font-bold text-secondary tracking-tight">
               Jiffy
             </Link>
           </div>
@@ -24,7 +24,7 @@ export default function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-secondary hover:text-primary transition-colors font-medium"
+                className="text-slate-600 hover:text-primary transition-colors font-medium text-sm"
               >
                 {item.label}
               </Link>
@@ -37,9 +37,9 @@ export default function Header() {
             </Button>
           </div>
           
-          {/* Mobile menu button placeholder - can be implemented if needed */}
+          {/* Mobile menu button placeholder */}
           <div className="md:hidden">
-             {/* Simple mobile menu logic would go here */}
+            {/* Simple mobile menu logic would go here */}
           </div>
         </div>
       </div>

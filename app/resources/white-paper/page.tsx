@@ -2,27 +2,27 @@ import Button from "../../../components/Button";
 
 export default function WhitePaper() {
   return (
-    <div className="flex flex-col gap-12 pb-16 pt-12">
+    <div className="flex flex-col gap-12 pb-16 pt-16">
       {/* Header */}
       <section className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
-        <div className="border-b border-gray-200 pb-8">
-           <span className="text-primary font-bold tracking-wider text-sm uppercase mb-2 block">Technical White Paper</span>
-           <h1 className="text-3xl md:text-5xl font-bold text-secondary mb-6">
+        <div className="border-b border-slate-200 pb-8">
+           <span className="text-primary font-bold tracking-widest text-xs uppercase mb-3 block">Technical White Paper</span>
+           <h1 className="text-3xl md:text-5xl font-bold text-secondary mb-6 leading-tight">
              ICA vs RAG: Why Context Architecture Matters for Conversational AI
            </h1>
-           <p className="text-lg text-secondary/60">
+           <p className="text-lg text-slate-500 font-medium">
              Published by Good Faith Labs | December 2024
            </p>
         </div>
       </section>
 
       {/* Content */}
-      <article className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl prose prose-lg prose-headings:text-secondary prose-p:text-secondary/80 prose-li:text-secondary/80">
+      <article className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl prose prose-lg prose-headings:text-secondary prose-p:text-slate-600 prose-li:text-slate-600 prose-strong:text-secondary">
         
         {/* Abstract */}
-        <div className="bg-gray-50 p-6 rounded-xl border border-gray-100 not-prose mb-12">
-           <h3 className="text-lg font-bold text-secondary mb-2">Abstract</h3>
-           <p className="text-secondary/80 italic">
+        <div className="bg-surface p-8 rounded-lg border border-slate-100 not-prose mb-12 shadow-sm">
+           <h3 className="text-sm font-bold text-secondary uppercase tracking-wider mb-3">Abstract</h3>
+           <p className="text-slate-600 italic leading-relaxed">
              This paper explores the limitations of Retrieval-Augmented Generation (RAG) in institutional settings and introduces Integrated Context Architecture (ICA) as a superior alternative. We demonstrate how ICA eliminates retrieval latency and context loss, providing a more reliable foundation for conversational AI in high-stakes environments like education.
            </p>
         </div>
@@ -55,30 +55,30 @@ export default function WhitePaper() {
         </p>
 
         <h2>4. Performance Comparison</h2>
-        <div className="not-prose my-8">
-           <div className="overflow-x-auto">
+        <div className="not-prose my-10">
+           <div className="overflow-x-auto rounded-lg border border-slate-200 shadow-sm">
              <table className="min-w-full text-left text-sm whitespace-nowrap">
-               <thead className="uppercase tracking-wider border-b-2 border-gray-200 bg-gray-50">
+               <thead className="uppercase tracking-wider border-b border-slate-200 bg-slate-50">
                  <tr>
                    <th scope="col" className="px-6 py-4 font-bold text-secondary">Metric</th>
-                   <th scope="col" className="px-6 py-4 font-bold text-secondary">Traditional RAG</th>
+                   <th scope="col" className="px-6 py-4 font-bold text-slate-500">Traditional RAG</th>
                    <th scope="col" className="px-6 py-4 font-bold text-primary">Jiffy ICA</th>
                  </tr>
                </thead>
-               <tbody className="divide-y divide-gray-100">
+               <tbody className="divide-y divide-slate-100">
                  <tr className="bg-white">
-                   <th scope="row" className="px-6 py-4 font-medium text-gray-900">Response Time</th>
-                   <td className="px-6 py-4 text-gray-500">2-5 seconds (latency high)</td>
+                   <th scope="row" className="px-6 py-4 font-medium text-secondary">Response Time</th>
+                   <td className="px-6 py-4 text-slate-500">2-5 seconds (latency high)</td>
                    <td className="px-6 py-4 font-bold text-primary">Instant (latency near-zero)</td>
                  </tr>
-                 <tr className="bg-gray-50/50">
-                   <th scope="row" className="px-6 py-4 font-medium text-gray-900">Accuracy</th>
-                   <td className="px-6 py-4 text-gray-500">Retrieval-dependent</td>
+                 <tr className="bg-slate-50/50">
+                   <th scope="row" className="px-6 py-4 font-medium text-secondary">Accuracy</th>
+                   <td className="px-6 py-4 text-slate-500">Retrieval-dependent</td>
                    <td className="px-6 py-4 font-bold text-primary">High consistency</td>
                  </tr>
                  <tr className="bg-white">
-                   <th scope="row" className="px-6 py-4 font-medium text-gray-900">Context Window</th>
-                   <td className="px-6 py-4 text-gray-500">Fragmented (chunks)</td>
+                   <th scope="row" className="px-6 py-4 font-medium text-secondary">Context Window</th>
+                   <td className="px-6 py-4 text-slate-500">Fragmented (chunks)</td>
                    <td className="px-6 py-4 font-bold text-primary">Holistic (full context)</td>
                  </tr>
                </tbody>
@@ -103,12 +103,12 @@ export default function WhitePaper() {
       </article>
 
       {/* CTA Section */}
-      <section className="bg-gray-50 py-12 border-t border-gray-200">
+      <section className="bg-surface py-12 border-t border-slate-200 mt-8">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-           <h3 className="text-2xl font-bold text-secondary mb-4">Ready to see the difference?</h3>
+           <h3 className="text-2xl font-bold text-secondary mb-6">Ready to see the difference?</h3>
            <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Button href="/demo">See ICA in Action</Button>
-              <Button href="#" variant="outline">Download PDF (Mock)</Button>
+              <Button href="#" variant="outline" className="bg-white">Download PDF (Mock)</Button>
            </div>
         </div>
       </section>

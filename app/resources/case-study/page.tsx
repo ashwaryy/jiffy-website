@@ -2,27 +2,27 @@ import Button from "../../../components/Button";
 
 export default function CaseStudy() {
   return (
-    <div className="flex flex-col gap-12 pb-16 pt-12">
+    <div className="flex flex-col gap-12 pb-16 pt-16">
       {/* Header */}
       <section className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
-        <div className="border-b border-gray-200 pb-8">
-           <span className="text-green-700 font-bold tracking-wider text-sm uppercase mb-2 block">Case Study</span>
-           <h1 className="text-3xl md:text-5xl font-bold text-secondary mb-6">
+        <div className="border-b border-slate-200 pb-8">
+           <span className="text-green-600 font-bold tracking-widest text-xs uppercase mb-3 block">Case Study</span>
+           <h1 className="text-3xl md:text-5xl font-bold text-secondary mb-6 leading-tight">
              How Educational Institutions Leverage Jiffy Analytics
            </h1>
-           <p className="text-lg text-secondary/60">
+           <p className="text-lg text-slate-500 font-medium">
              Turning conversation data into better student support.
            </p>
         </div>
       </section>
 
       {/* Content */}
-      <article className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl prose prose-lg prose-headings:text-secondary prose-p:text-secondary/80 prose-li:text-secondary/80">
+      <article className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl prose prose-lg prose-headings:text-secondary prose-p:text-slate-600 prose-li:text-slate-600 prose-strong:text-secondary">
         
         {/* Executive Summary */}
-        <div className="bg-green-50 p-6 rounded-xl border border-green-100 not-prose mb-12">
-           <h3 className="text-lg font-bold text-green-900 mb-2">Executive Summary</h3>
-           <p className="text-green-800/80">
+        <div className="bg-green-50/50 p-8 rounded-lg border border-green-100 not-prose mb-12 shadow-sm">
+           <h3 className="text-sm font-bold text-green-800 uppercase tracking-wider mb-3">Executive Summary</h3>
+           <p className="text-green-900/80 leading-relaxed">
              This case study examines how a mid-sized university used Jiffy's Knowledge Agent and Analytics Dashboard to reduce support workload by 40% while identifying key areas for improvement in their student outreach strategy.
            </p>
         </div>
@@ -43,7 +43,7 @@ export default function CaseStudy() {
         <h2>3. Analytics in Action</h2>
         <p>The data revealed insights that the administration had previously missed:</p>
         
-        <h3 className="text-xl font-bold text-secondary mt-8 mb-4">Example 1: Geographic Insights</h3>
+        <h3 className="text-xl font-bold text-secondary mt-10 mb-4">Example 1: Geographic Insights</h3>
         <p>
           <strong>Insight:</strong> The "Geographic Intelligence" map showed 40% of queries coming from a specific non-local region they hadn't targeted.
           <br/>
@@ -52,7 +52,7 @@ export default function CaseStudy() {
           <strong>Result:</strong> A 25% increase in applications from that new geography.
         </p>
 
-        <h3 className="text-xl font-bold text-secondary mt-8 mb-4">Example 2: Topic Trends</h3>
+        <h3 className="text-xl font-bold text-secondary mt-10 mb-4">Example 2: Topic Trends</h3>
         <p>
           <strong>Insight:</strong> A sudden spike in "scholarship" and "financial aid" queries occurred in early March, two weeks before they expected it.
           <br/>
@@ -61,7 +61,7 @@ export default function CaseStudy() {
           <strong>Result:</strong> Support ticket volume related to aid dropped by 30%.
         </p>
 
-        <h3 className="text-xl font-bold text-secondary mt-8 mb-4">Example 3: Peak Hour Optimization</h3>
+        <h3 className="text-xl font-bold text-secondary mt-10 mb-4">Example 3: Peak Hour Optimization</h3>
         <p>
           <strong>Insight:</strong> 70% of chat activity occurred between 7 PM and 11 PM, when staff were offline.
           <br/>
@@ -84,11 +84,11 @@ export default function CaseStudy() {
       </article>
 
       {/* CTA Section */}
-      <section className="bg-secondary text-white py-12 mt-8 rounded-t-3xl">
+      <section className="bg-secondary text-white py-16 mt-8 rounded-t-2xl shadow-2xl">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-           <h3 className="text-2xl font-bold mb-4">Ready to Unlock Your Institution's Insights?</h3>
+           <h3 className="text-2xl font-bold mb-6">Ready to Unlock Your Institution's Insights?</h3>
            <div className="flex justify-center">
-              <Button href="/demo" className="bg-white text-secondary hover:bg-orange-100">Request Demo</Button>
+              <Button href="/demo" className="bg-white text-secondary hover:bg-slate-100 border-none shadow-lg">Request Demo</Button>
            </div>
         </div>
       </section>
