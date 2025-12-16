@@ -7,10 +7,36 @@ import { GiraffeMascot, CheckCircleIcon } from "../../components/icons";
 
 export default function Demo() {
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSubmitted(true);
+    setIsSubmitting(true);
+    setError(null);
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setSubmitted(true);
+        form.reset();
+      } else {
+        setError(data.message || "Something went wrong. Please try again.");
+      }
+    } catch {
+      setError("Failed to submit form. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -44,6 +70,10 @@ export default function Demo() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
+                  <input type="hidden" name="access_key" value="e8c49db5-08e0-4ceb-97c2-98f85f168e74" />
+                  <input type="hidden" name="subject" value="New Demo Request from Jiffy Website" />
+                  <input type="hidden" name="from_name" value="Jiffy Demo Form" />
+
                   {[
                     { id: "name", label: "Full Name", type: "text", placeholder: "Jane Doe" },
                     { id: "email", label: "Work Email", type: "email", placeholder: "jane@university.edu" },
@@ -56,6 +86,7 @@ export default function Demo() {
                       <input
                         type={field.type}
                         id={field.id}
+                        name={field.id}
                         required
                         className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all placeholder:text-slate-400 hover:border-slate-300"
                         placeholder={field.placeholder}
@@ -69,6 +100,7 @@ export default function Demo() {
                     </label>
                     <select
                       id="type"
+                      name="institution_type"
                       className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all bg-white text-slate-600 hover:border-slate-300"
                     >
                       <option>University</option>
@@ -80,20 +112,48 @@ export default function Demo() {
                   </div>
 
                   <div className="animate-fade-in-up animate-delay-200">
+                    <label className="block text-sm font-medium text-slate-700 mb-3">Preferred Contact Method</label>
+                    <div className="flex gap-6">
+                      <label className="flex items-center gap-2 cursor-pointer">
+                        <input
+                          type="radio"
+                          name="contact_method"
+                          value="Email"
+                          defaultChecked
+                          className="w-4 h-4 text-primary border-slate-300 focus:ring-primary/20"
+                        />
+                        <span className="text-slate-600">Email</span>
+                      </label>
+                      <label className="flex items-center gap-2 cursor-pointer">
+                        <input
+                          type="radio"
+                          name="contact_method"
+                          value="Phone"
+                          className="w-4 h-4 text-primary border-slate-300 focus:ring-primary/20"
+                        />
+                        <span className="text-slate-600">Phone</span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <div className="animate-fade-in-up animate-delay-250">
                     <label htmlFor="message" className="block text-sm font-medium text-slate-700 mb-2">
                       Message (Optional)
                     </label>
                     <textarea
                       id="message"
+                      name="message"
                       rows={4}
                       className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all placeholder:text-slate-400 hover:border-slate-300 resize-none"
                       placeholder="Tell us about your specific needs..."
                     />
                   </div>
 
+                  {error && <div className="p-4 bg-red-50 border border-red-200 rounded-lg text-red-600 text-sm">{error}</div>}
+
                   <div className="animate-fade-in-up animate-delay-250">
-                    <Button type="submit" className="w-full justify-center">
-                      Request Demo
+                    <Button type="submit" className="w-full justify-center" disabled={isSubmitting}>
+                      {isSubmitting ? "Submitting..." : "Request Demo"}
                     </Button>
                   </div>
                 </form>
