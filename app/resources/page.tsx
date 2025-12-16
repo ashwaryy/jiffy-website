@@ -28,7 +28,7 @@ export default function Resources() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {/* White Paper */}
           <FadeInUp delay={0.1}>
-            <div className="transition-lift">
+            <div className="transition-lift h-full">
               <Card className="flex flex-col h-full hover:border-primary/50 transition-all duration-300 bg-white hover:shadow-xl hover:shadow-orange-100/30">
                 <div className="mb-4 flex items-center gap-2">
                   <span className="bg-gradient-to-r from-orange-100 to-amber-100 text-primary text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
@@ -63,7 +63,7 @@ export default function Resources() {
 
           {/* Case Study */}
           <FadeInUp delay={0.2}>
-            <div className="transition-lift">
+            <div className="transition-lift h-full">
               <Card className="flex flex-col h-full hover:border-green-300/50 transition-all duration-300 bg-white hover:shadow-xl hover:shadow-green-100/30">
                 <div className="mb-4">
                   <span className="bg-gradient-to-r from-green-50 to-emerald-50 text-green-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide border border-green-100">
