@@ -1,13 +1,25 @@
 @import "tailwindcss";
 
 :root {
-  /* Premium Design System Colors */
-  --jiffy-primary: #ea580c; /* Sharper Orange (Orange-600) for pop */
-  --jiffy-accent: #facc15; /* Yellow (Yellow-400) for highlights */
+  /* Warm & Playful Design System Colors */
+  --jiffy-primary: #f97316; /* Orange-500 - warmer, friendlier */
+  --jiffy-primary-dark: #ea580c; /* Orange-600 for hover states */
+  --jiffy-accent: #fbbf24; /* Amber-400 - warmer yellow */
+  --jiffy-accent-light: #fef3c7; /* Amber-100 for subtle backgrounds */
   --jiffy-secondary: #0f172a; /* Slate-900 for sharp, premium text */
   --jiffy-background: #ffffff; /* Clean White */
-  --jiffy-surface: #f8fafc; /* Slate-50 for subtle backgrounds */
-  
+  --jiffy-surface: #fffbeb; /* Amber-50 - warmer surface */
+
+  /* Gradient Blob Colors */
+  --blob-orange: rgba(251, 146, 60, 0.3);
+  --blob-amber: rgba(251, 191, 36, 0.25);
+  --blob-coral: rgba(249, 115, 22, 0.2);
+
+  /* Warm Tones */
+  --jiffy-warm-50: #fffbeb;
+  --jiffy-warm-100: #fef3c7;
+  --jiffy-coral: #fb923c;
+
   /* Semantic mappings */
   --background: var(--jiffy-background);
   --foreground: var(--jiffy-secondary);
@@ -17,14 +29,141 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-primary: var(--jiffy-primary);
+  --color-primary-dark: var(--jiffy-primary-dark);
   --color-secondary: var(--jiffy-secondary);
   --color-surface: var(--jiffy-surface);
   --color-accent: var(--jiffy-accent);
+  --color-accent-light: var(--jiffy-accent-light);
+  --color-warm-50: var(--jiffy-warm-50);
+  --color-warm-100: var(--jiffy-warm-100);
+  --color-coral: var(--jiffy-coral);
   --font-sans: var(--font-dm-sans);
+  --font-serif: var(--font-dm-serif);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), sans-serif;
+}
+
+/* ============================================
+   CSS Animations (Safari-compatible)
+   ============================================ */
+
+/* Keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+@keyframes floatRotate {
+  0%, 100% {
+    transform: translateY(-10px) rotate(-2deg);
+  }
+  50% {
+    transform: translateY(10px) rotate(2deg);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Animation utility classes */
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-float-rotate {
+  animation: floatRotate 4s ease-in-out infinite;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+}
+
+/* Stagger delays */
+.animate-delay-100 { animation-delay: 0.1s; }
+.animate-delay-200 { animation-delay: 0.2s; }
+.animate-delay-300 { animation-delay: 0.3s; }
+.animate-delay-400 { animation-delay: 0.4s; }
+.animate-delay-500 { animation-delay: 0.5s; }
+.animate-delay-600 { animation-delay: 0.6s; }
+.animate-delay-700 { animation-delay: 0.7s; }
+
+/* Transition utilities for interactive elements */
+.transition-lift {
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.transition-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1);
+}
+
+.transition-scale {
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.transition-scale:hover {
+  transform: scale(1.02);
+}
+
+.transition-scale:active {
+  transform: scale(0.98);
+}
+
+/* Static gradient backgrounds (no animation for Safari compatibility) */
+.gradient-bg-warm {
+  background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 50%, #fffbeb 100%);
+}
+
+.gradient-bg-hero {
+  background: linear-gradient(180deg, #ffffff 0%, #fffbeb 50%, #fef3c7 100%);
+}
+
+/* Subtle decorative blobs (static) */
+.blob-decoration {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.blob-orange {
+  background: linear-gradient(135deg, rgba(251, 146, 60, 0.3), rgba(254, 243, 199, 0.2));
+}
+
+.blob-amber {
+  background: linear-gradient(135deg, rgba(251, 191, 36, 0.25), rgba(249, 115, 22, 0.15));
 }
