@@ -107,7 +107,7 @@ export default function HowItWorks() {
               {
                 num: 1,
                 title: "Provide Your Knowledge",
-                desc: "Upload your FAQs, policy documents, course catalogs, and any other resources. We accept most formats.",
+                desc: "Upload your FAQs, policy documents, product guides, and any other resources. We accept most formats.",
               },
               {
                 num: 2,
@@ -139,7 +139,7 @@ export default function HowItWorks() {
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-secondary mb-4">Why Accuracy Matters</h2>
               <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-                In education, "close enough" isn't good enough. Students need the right answer, the first time.
+                When people ask questions, "close enough" isn't good enough. They need the right answer, the first time.
               </p>
             </div>
           </FadeInUp>
@@ -151,7 +151,7 @@ export default function HowItWorks() {
                 Common Failures
               </h3>
               <ul className="space-y-3 text-red-900/70">
-                {["Hallucinating policies that don't exist", "Providing outdated deadlines", "Getting confused by similar course codes"].map(
+                {["Hallucinating policies that don't exist", "Providing outdated information", "Getting confused by similar terms or codes"].map(
                   (item, i) => (
                     <li key={item} className={`flex items-start gap-2 animate-fade-in-up animate-delay-${i * 100}`}>
                       <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-red-400 shrink-0" />

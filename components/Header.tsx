@@ -7,6 +7,7 @@ export default function Header() {
     { label: "Home", href: "/" },
     { label: "How It Works", href: "/how-it-works" },
     { label: "Analytics", href: "/analytics" },
+    { label: "Pricing", href: "/pricing" },
     { label: "Resources", href: "/resources" },
   ];
 
