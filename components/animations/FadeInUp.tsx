@@ -14,7 +14,7 @@ export default function FadeInUp({
   const delayClass = delay > 0 ? `animate-delay-${Math.round(delay * 1000)}` : "";
 
   return (
-    <div className={`${className} ${delayClass}`}>
+    <div className={`animate-fade-in-up ${className} ${delayClass}`}>
       {children}
     </div>
   );

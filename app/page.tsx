@@ -70,7 +70,7 @@ export default function Home() {
                       <p className="text-sm text-slate-600 font-medium">How do I apply for financial aid?</p>
                     </div>
 
-                    <div className="bg-linear-to-br from-orange-50 to-amber-50 p-4 rounded-xl shadow-sm border border-orange-100/50 text-left w-5/6 ml-auto animate-fade-in-up animate-delay-700">
+                    <div className="bg-linear-to-br from-orange-50 to-amber-50 p-4 rounded-xl shadow-sm border border-orange-100/50 text-left w-5/6 ml-auto animate-fade-in-up animate-delay-1200">
                       <div className="flex items-center gap-2 mb-2">
                         <div className="w-5 h-5 rounded-full bg-linear-to-br from-primary to-amber-400 flex items-center justify-center">
                           <GiraffeMascot size={12} />
@@ -78,6 +78,36 @@ export default function Home() {
                         <span className="text-xs font-bold text-primary">Jiffy Agent</span>
                       </div>
                       <p className="text-sm text-slate-700">You can apply via the FAFSA portal. The deadline for this semester is May 1st.</p>
+                    </div>
+
+                    <div className="bg-white p-4 rounded-xl shadow-sm border border-slate-100 text-left w-4/5 mr-auto animate-fade-in-up animate-delay-2000">
+                      <div className="h-2 w-1/4 bg-slate-100 rounded mb-2" />
+                      <p className="text-sm text-slate-600 font-medium">What documents do I need?</p>
+                    </div>
+
+                    <div className="bg-linear-to-br from-orange-50 to-amber-50 p-4 rounded-xl shadow-sm border border-orange-100/50 text-left w-11/12 ml-auto animate-fade-in-up animate-delay-2500">
+                      <div className="flex items-center gap-2 mb-2">
+                        <div className="w-5 h-5 rounded-full bg-linear-to-br from-primary to-amber-400 flex items-center justify-center">
+                          <GiraffeMascot size={12} />
+                        </div>
+                        <span className="text-xs font-bold text-primary">Jiffy Agent</span>
+                      </div>
+                      <p className="text-sm text-slate-700">You'll need your tax returns, W-2 forms, and bank statements.</p>
+                    </div>
+
+                    <div className="bg-white p-4 rounded-xl shadow-sm border border-slate-100 text-left w-2/3 mr-auto animate-fade-in-up animate-delay-3500">
+                      <div className="h-2 w-1/2 bg-slate-100 rounded mb-2" />
+                      <p className="text-sm text-slate-600 font-medium">Can I get an extension?</p>
+                    </div>
+
+                    <div className="bg-linear-to-br from-orange-50 to-amber-50 p-4 rounded-xl shadow-sm border border-orange-100/50 text-left w-5/6 ml-auto animate-fade-in-up animate-delay-4500">
+                      <div className="flex items-center gap-2 mb-2">
+                        <div className="w-5 h-5 rounded-full bg-linear-to-br from-primary to-amber-400 flex items-center justify-center">
+                          <GiraffeMascot size={12} />
+                        </div>
+                        <span className="text-xs font-bold text-primary">Jiffy Agent</span>
+                      </div>
+                      <p className="text-sm text-slate-700">Extensions are granted on a case-by-case basis. Please contact the financial aid office directly.</p>
                     </div>
                   </div>
                 </div>
