@@ -81,7 +81,7 @@ export default function Analytics() {
             <div key={insight.title} className={`animate-fade-in-up animate-delay-${100 * i}`}>
               <Card title={insight.title} className="h-full" hoverEffect="lift" delay={0}>
                 <div className={`${insight.bg} h-32 rounded-xl mb-6 flex items-center justify-center ${insight.border} border transition-scale`}>
-                  <div className="text-slate-600 animate-float">
+                  <div className="text-slate-600">
                     {insight.icon}
                   </div>
                 </div>
