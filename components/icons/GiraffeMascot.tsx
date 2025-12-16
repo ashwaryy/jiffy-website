@@ -1,137 +1,89 @@
 interface GiraffeMascotProps {
-  variant?: "happy" | "thinking" | "waving";
   size?: number;
   className?: string;
+  /**
+   * Optional accent color for eyes/spots/horn tips.
+   * Defaults to a dark, warm charcoal.
+   */
+  accentColor?: string;
 }
 
 export default function GiraffeMascot({
-  variant = "happy",
   size = 120,
   className = "",
+  accentColor = "#292524", // warm charcoal
 }: GiraffeMascotProps) {
-  const scale = size / 120;
-
   return (
     <svg
       width={size}
       height={size}
       viewBox="0 0 120 120"
       fill="none"
-      className={className}
       xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      aria-label="Giraffe Icon"
     >
-      {/* Spots on head */}
-      <g opacity="0.6">
-        <ellipse cx="45" cy="30" rx="6" ry="5" fill="#D97706" />
-        <ellipse cx="70" cy="25" rx="5" ry="4" fill="#D97706" />
-        <ellipse cx="60" cy="40" rx="4" ry="3" fill="#D97706" />
-        <ellipse cx="50" cy="48" rx="3" ry="2.5" fill="#D97706" />
-        <ellipse cx="72" cy="45" rx="4" ry="3" fill="#D97706" />
-      </g>
-
-      {/* Neck */}
-      <path
-        d="M50 70 L45 100 Q45 105 50 105 L70 105 Q75 105 75 100 L70 70"
-        fill="url(#giraffeGradient)"
-        stroke="#D97706"
-        strokeWidth="2"
-      />
-
-      {/* Neck spots */}
-      <g opacity="0.5">
-        <ellipse cx="55" cy="80" rx="4" ry="3" fill="#D97706" />
-        <ellipse cx="65" cy="88" rx="3" ry="2.5" fill="#D97706" />
-        <ellipse cx="58" cy="95" rx="3" ry="2" fill="#D97706" />
-      </g>
-
-      {/* Head */}
-      <ellipse cx="60" cy="42" rx="25" ry="22" fill="url(#giraffeGradient)" stroke="#D97706" strokeWidth="2" />
-
-      {/* Ossicones (horns) */}
-      <g>
-        <rect x="47" y="12" width="5" height="14" rx="2.5" fill="url(#giraffeGradient)" stroke="#D97706" strokeWidth="1.5" />
-        <circle cx="49.5" cy="12" r="4" fill="#F97316" stroke="#D97706" strokeWidth="1.5" />
-        <rect x="67" y="12" width="5" height="14" rx="2.5" fill="url(#giraffeGradient)" stroke="#D97706" strokeWidth="1.5" />
-        <circle cx="69.5" cy="12" r="4" fill="#F97316" stroke="#D97706" strokeWidth="1.5" />
-      </g>
-
-      {/* Ears */}
-      <ellipse cx="38" cy="30" rx="7" ry="5" fill="url(#giraffeGradient)" stroke="#D97706" strokeWidth="1.5" transform="rotate(-20 38 30)" />
-      <ellipse cx="82" cy="30" rx="7" ry="5" fill="url(#giraffeGradient)" stroke="#D97706" strokeWidth="1.5" transform="rotate(20 82 30)" />
-
-      {/* Eyes */}
-      <g>
-        <ellipse cx="50" cy="38" rx="6" ry="7" fill="white" />
-        <ellipse cx="70" cy="38" rx="6" ry="7" fill="white" />
-        {variant === "happy" && (
-          <>
-            <circle cx="51" cy="39" r="3.5" fill="#1E293B" />
-            <circle cx="71" cy="39" r="3.5" fill="#1E293B" />
-            <circle cx="52" cy="37" r="1.5" fill="white" />
-            <circle cx="72" cy="37" r="1.5" fill="white" />
-          </>
-        )}
-        {variant === "thinking" && (
-          <>
-            <circle cx="52" cy="40" r="3.5" fill="#1E293B" />
-            <circle cx="72" cy="36" r="3.5" fill="#1E293B" />
-            <circle cx="53" cy="38" r="1.5" fill="white" />
-            <circle cx="73" cy="34" r="1.5" fill="white" />
-          </>
-        )}
-        {variant === "waving" && (
-          <>
-            <circle cx="51" cy="39" r="3.5" fill="#1E293B" />
-            <ellipse cx="71" cy="40" rx="4" ry="2" fill="#1E293B" />
-            <circle cx="52" cy="37" r="1.5" fill="white" />
-          </>
-        )}
-      </g>
-
-      {/* Snout */}
-      <ellipse cx="60" cy="54" rx="10" ry="7" fill="#FBBF24" stroke="#D97706" strokeWidth="1.5" />
-
-      {/* Nostrils */}
-      <ellipse cx="56" cy="54" rx="1.5" ry="2" fill="#D97706" />
-      <ellipse cx="64" cy="54" rx="1.5" ry="2" fill="#D97706" />
-
-      {/* Mouth */}
-      {variant === "happy" && (
-        <path
-          d="M55 58 Q60 62 65 58"
-          stroke="#D97706"
-          strokeWidth="2"
-          strokeLinecap="round"
-          fill="none"
-        />
-      )}
-      {variant === "thinking" && (
-        <ellipse cx="63" cy="58" rx="2" ry="1.5" fill="#D97706" />
-      )}
-      {variant === "waving" && (
-        <path
-          d="M54 57 Q60 63 66 57"
-          stroke="#D97706"
-          strokeWidth="2"
-          strokeLinecap="round"
-          fill="none"
-        />
-      )}
-
-      {/* Blush marks */}
-      <g opacity="0.4">
-        <ellipse cx="42" cy="46" rx="4" ry="2" fill="#FB923C" />
-        <ellipse cx="78" cy="46" rx="4" ry="2" fill="#FB923C" />
-      </g>
-
-      {/* Gradient definitions */}
       <defs>
-        <linearGradient id="giraffeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="#FDE68A" />
-          <stop offset="50%" stopColor="#FBBF24" />
-          <stop offset="100%" stopColor="#F59E0B" />
+        {/* Main body gradient - rich gold to orange */}
+        <linearGradient id="giraffeBodyGrad" x1="60" y1="0" x2="60" y2="110" gradientUnits="userSpaceOnUse">
+          <stop stopColor="#FBBF24" /> {/* Amber-400 */}
+          <stop offset="1" stopColor="#D97706" /> {/* Amber-600 */}
+        </linearGradient>
+
+        {/* Lighter snout gradient for depth and contrast */}
+        <linearGradient id="giraffeSnoutGrad" x1="60" y1="50" x2="60" y2="90" gradientUnits="userSpaceOnUse">
+          <stop stopColor="#FDE68A" /> {/* Amber-200 */}
+          <stop offset="1" stopColor="#F59E0B" /> {/* Amber-500 */}
         </linearGradient>
       </defs>
+
+      {/* --- Neck & Spots --- */}
+      <path d="M48 110L52 65H68L72 110H48Z" fill="url(#giraffeBodyGrad)" />
+      {/* Geometric Spots (Darker Accent) */}
+      <g fill={accentColor} opacity="0.2">
+        <path d="M54 95L58 85L62 88L54 95Z" />
+        <path d="M64 75L68 82L60 80L64 75Z" />
+        <path d="M56 72L52 78L58 80L56 72Z" />
+      </g>
+
+      {/* --- Head Structure --- */}
+
+      {/* Main Head Shield silhouette */}
+      <path d="M60 15L40 30L45 65L60 75L75 65L80 30L60 15Z" fill="url(#giraffeBodyGrad)" />
+
+      {/* DISTINCT HORNS (Ossicones) - Geometric Prisms placed behind the front face layers */}
+      <g>
+        {/* Left Horn Stalk */}
+        <path d="M51 20 L49 4 L55 4 L57 20 Z" fill="url(#giraffeBodyGrad)" />
+        {/* Left Horn Tip (Dark Cap) */}
+        <path d="M49 4 L55 4 L54 1 L50 1 Z" fill={accentColor} />
+
+        {/* Right Horn Stalk */}
+        <path d="M69 20 L71 4 L65 4 L63 20 Z" fill="url(#giraffeBodyGrad)" />
+        {/* Right Horn Tip (Dark Cap) */}
+        <path d="M71 4 L65 4 L66 1 L70 1 Z" fill={accentColor} />
+      </g>
+
+      {/* Ear Facets (Slightly darker to recede) */}
+      <path d="M48 20L35 25L40 30L48 20Z" fill="#D97706" />
+      <path d="M72 20L85 25L80 30L72 20Z" fill="#D97706" />
+
+      {/* --- Face Details --- */}
+
+      {/* Snout Plane (Lighter front area) */}
+      <path d="M45 65L50 45H70L75 65L60 75L45 65Z" fill="url(#giraffeSnoutGrad)" />
+
+      {/* Serious Eyes (Angled Slits) */}
+      <g fill={accentColor}>
+        <path d="M48 52L58 55L48 58V52Z" />
+        <path d="M72 52L62 55L72 58V52Z" />
+      </g>
+
+      {/* Nostril Lines */}
+      <g stroke={accentColor} strokeWidth="2" strokeLinecap="round" opacity="0.4">
+        <path d="M56 68L58 70" />
+        <path d="M64 68L62 70" />
+      </g>
     </svg>
   );
 }
