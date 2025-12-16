@@ -1,5 +1,13 @@
+import type { Metadata } from "next";
 import Button from "../../../components/Button";
 import { FadeInUp, AnimatedBackground } from "../../../components/animations";
+import { generatePageMetadata } from "../../../lib/seo";
+
+export const metadata: Metadata = generatePageMetadata({
+  title: "ICA Technical White Paper",
+  description: "Deep dive into Integrated Context Architecture - the technology behind Jiffy's accurate, fast responses.",
+  path: "/resources/white-paper",
+});
 
 export default function WhitePaper() {
   return (

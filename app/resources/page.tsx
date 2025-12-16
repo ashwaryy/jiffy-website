@@ -1,7 +1,15 @@
+import type { Metadata } from "next";
 import Button from "../../components/Button";
 import Card from "../../components/Card";
 import { FadeInUp, AnimatedBackground } from "../../components/animations";
 import { GiraffeMascot, DocumentIcon } from "../../components/icons";
+import { generatePageMetadata } from "../../lib/seo";
+
+export const metadata: Metadata = generatePageMetadata({
+  title: "Resources",
+  description: "Explore technical documentation, case studies, and insights about Jiffy's knowledge agent platform.",
+  path: "/resources",
+});
 
 export default function Resources() {
   return (

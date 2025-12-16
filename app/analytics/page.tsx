@@ -1,7 +1,15 @@
+import type { Metadata } from "next";
 import Button from "../../components/Button";
 import Card from "../../components/Card";
 import { AnimatedBackground, FadeInUp } from "../../components/animations";
 import { GlobalIcon, AnalyticsIcon, TimeIcon, ChatIcon, CheckCircleIcon } from "../../components/icons";
+import { generatePageMetadata } from "../../lib/seo";
+
+export const metadata: Metadata = generatePageMetadata({
+  title: "Jiffy Pulse Analytics",
+  description: "Turn conversations into institutional intelligence with real-time analytics and actionable insights.",
+  path: "/analytics",
+});
 
 export default function Analytics() {
   const insights = [

@@ -1,6 +1,14 @@
+import type { Metadata } from "next";
 import Button from "../../../components/Button";
 import { FadeInUp } from "../../../components/animations";
 import { CheckCircleIcon } from "../../../components/icons";
+import { generatePageMetadata } from "../../../lib/seo";
+
+export const metadata: Metadata = generatePageMetadata({
+  title: "Case Study",
+  description: "See how institutions use Jiffy to transform their knowledge management and user experience.",
+  path: "/resources/case-study",
+});
 
 export default function CaseStudy() {
   const examples = [

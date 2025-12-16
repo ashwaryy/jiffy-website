@@ -1,7 +1,15 @@
+import type { Metadata } from "next";
 import Button from "../components/Button";
 import Card from "../components/Card";
 import { AnimatedBackground, FadeInUp } from "../components/animations";
 import { GiraffeMascot, SpeedIcon, AnalyticsIcon, SetupIcon } from "../components/icons";
+import { generatePageMetadata } from "../lib/seo";
+
+export const metadata: Metadata = generatePageMetadata({
+  title: "Jiffy.live - Your Institution's Knowledge Agent",
+  description: "Lightning-fast answers. Deep insights. Built on Integrated Context Architecture (ICA).",
+  path: "",
+});
 
 export default function Home() {
   return (

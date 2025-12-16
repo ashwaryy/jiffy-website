@@ -1,7 +1,15 @@
+import type { Metadata } from "next";
 import Button from "../../components/Button";
 import Card from "../../components/Card";
 import { FadeInUp, AnimatedBackground } from "../../components/animations";
 import { GiraffeMascot, CheckCircleIcon } from "../../components/icons";
+import { generatePageMetadata } from "../../lib/seo";
+
+export const metadata: Metadata = generatePageMetadata({
+  title: "How Jiffy Works",
+  description: "Discover how Integrated Context Architecture (ICA) delivers accurate answers 10x faster than traditional RAG.",
+  path: "/how-it-works",
+});
 
 export default function HowItWorks() {
   return (
