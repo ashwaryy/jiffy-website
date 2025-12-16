@@ -1,6 +1,6 @@
 import Button from "../components/Button";
 import Card from "../components/Card";
-import { AnimatedBackground, FadeInUp, FloatingElement } from "../components/animations";
+import { AnimatedBackground, FadeInUp } from "../components/animations";
 import { GiraffeMascot, SpeedIcon, AnalyticsIcon, SetupIcon } from "../components/icons";
 
 export default function Home() {
@@ -55,8 +55,7 @@ export default function Home() {
 
             {/* Chat Demo Visual */}
             <FadeInUp delay={0.2} className="relative">
-              <FloatingElement className="relative">
-                <div className="relative h-[450px] w-full flex items-center justify-center bg-white rounded-2xl overflow-hidden border border-slate-100/80 shadow-2xl shadow-orange-100/30">
+              <div className="relative h-[450px] w-full flex items-center justify-center bg-white rounded-2xl overflow-hidden border border-slate-100/80 shadow-2xl shadow-orange-100/30">
                   {/* Abstract Grid Background */}
                   <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:24px_24px]" />
 
@@ -64,13 +63,11 @@ export default function Home() {
                   <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-amber-100/50 to-transparent rounded-full blur-3xl" />
 
                   <div className="relative z-10 text-center p-8 w-full max-w-md">
-                    <FloatingElement>
-                      <div className="flex justify-center mb-6">
+                    <div className="flex justify-center mb-6">
                         <div className="w-24 h-24 bg-gradient-to-tr from-primary via-orange-400 to-amber-400 rounded-2xl flex items-center justify-center shadow-lg shadow-orange-200/50 transform -rotate-6 transition-scale">
                           <GiraffeMascot variant="happy" size={64} />
                         </div>
                       </div>
-                    </FloatingElement>
 
                     <div className="space-y-4">
                       <div className="bg-white p-4 rounded-xl shadow-sm border border-slate-100 text-left w-3/4 mr-auto animate-fade-in-up animate-delay-500">
@@ -96,10 +93,8 @@ export default function Home() {
                       </div>
                     </div>
                   </div>
-                </div>
-              </FloatingElement>
-            </FadeInUp>
-          </div>
+                                  </div>
+                            </FadeInUp>          </div>
         </div>
       </section>
 
