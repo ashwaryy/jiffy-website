@@ -19,6 +19,9 @@ const dmSerif = DM_Serif_Display({
 export const metadata: Metadata = {
   title: "Jiffy.live - Your Institution's Knowledge Agent",
   description: "Lightning-fast answers. Deep insights. Built on Integrated Context Architecture (ICA).",
+  icons: {
+    icon: '/giraffe.svg',
+  },
 };
 
 export default function RootLayout({
