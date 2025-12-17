@@ -63,7 +63,8 @@ export const defaultMetadata: Metadata = {
     },
   },
   icons: {
-    icon: '/giraffe.svg',
+    icon: '/giraffe.png',
+    apple: '/giraffe.png',
   },
 };
 
