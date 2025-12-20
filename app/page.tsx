@@ -75,7 +75,7 @@ export default function Home() {
                   <div className="space-y-4">
                     <div className="bg-white p-4 rounded-xl shadow-sm border border-slate-100 text-left w-3/4 mr-auto animate-fade-in-up animate-delay-500">
                       <div className="h-2 w-1/3 bg-slate-100 rounded mb-2" />
-                      <p className="text-sm text-slate-600 font-medium">How do I apply for financial aid?</p>
+                      <p className="text-sm text-slate-600 font-medium">What's the application deadline?</p>
                     </div>
 
                     <div className="bg-linear-to-br from-orange-50 to-amber-50 p-4 rounded-xl shadow-sm border border-orange-100/50 text-left w-5/6 ml-auto animate-fade-in-up animate-delay-1200">
@@ -85,12 +85,12 @@ export default function Home() {
                         </div>
                         <span className="text-xs font-bold text-primary">Jiffy Agent</span>
                       </div>
-                      <p className="text-sm text-slate-700">You can apply via the FAFSA portal. The deadline for this semester is May 1st.</p>
+                      <p className="text-sm text-slate-700">The regular decision deadline is January 15th. Early action is November 1st.</p>
                     </div>
 
                     <div className="bg-white p-4 rounded-xl shadow-sm border border-slate-100 text-left w-4/5 mr-auto animate-fade-in-up animate-delay-2000">
                       <div className="h-2 w-1/4 bg-slate-100 rounded mb-2" />
-                      <p className="text-sm text-slate-600 font-medium">What documents do I need?</p>
+                      <p className="text-sm text-slate-600 font-medium">Do you offer merit scholarships?</p>
                     </div>
 
                     <div className="bg-linear-to-br from-orange-50 to-amber-50 p-4 rounded-xl shadow-sm border border-orange-100/50 text-left w-11/12 ml-auto animate-fade-in-up animate-delay-2500">
@@ -100,12 +100,12 @@ export default function Home() {
                         </div>
                         <span className="text-xs font-bold text-primary">Jiffy Agent</span>
                       </div>
-                      <p className="text-sm text-slate-700">You'll need your tax returns, W-2 forms, and bank statements.</p>
+                      <p className="text-sm text-slate-700">Yes! Merit scholarships range from $5K-$20K annually. Students with 3.5+ GPA are automatically considered.</p>
                     </div>
 
                     <div className="bg-white p-4 rounded-xl shadow-sm border border-slate-100 text-left w-2/3 mr-auto animate-fade-in-up animate-delay-3500">
                       <div className="h-2 w-1/2 bg-slate-100 rounded mb-2" />
-                      <p className="text-sm text-slate-600 font-medium">Can I get an extension?</p>
+                      <p className="text-sm text-slate-600 font-medium">Can I visit campus?</p>
                     </div>
 
                     <div className="bg-linear-to-br from-orange-50 to-amber-50 p-4 rounded-xl shadow-sm border border-orange-100/50 text-left w-5/6 ml-auto animate-fade-in-up animate-delay-4500">
@@ -115,7 +115,7 @@ export default function Home() {
                         </div>
                         <span className="text-xs font-bold text-primary">Jiffy Agent</span>
                       </div>
-                      <p className="text-sm text-slate-700">Extensions are granted on a case-by-case basis. Please contact the financial aid office directly.</p>
+                      <p className="text-sm text-slate-700">Absolutely! Campus tours run Monday-Friday at 10am and 2pm. Book online or call admissions.</p>
                     </div>
                   </div>
                 </div>
@@ -191,29 +191,82 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Social Proof */}
-      <section className="container mx-auto px-4 sm:px-6 lg:px-8 text-center pt-16">
+      {/* Use Case Snapshots */}
+      <section className="container mx-auto px-4 sm:px-6 lg:px-8 pt-16">
         <FadeInUp>
-          <p className="text-xs font-bold tracking-widest text-slate-400 uppercase mb-6">Trusted Technology</p>
-        </FadeInUp>
-
-        <FadeInUp delay={0.1}>
-          <div className="flex justify-center items-center gap-3 mb-16">
-            <GiraffeMascot size={40} />
-            <span className="text-xl font-bold text-secondary">Built by Good Faith Labs</span>
+          <div className="text-center mb-12">
+            <p className="text-xs font-bold tracking-widest text-slate-400 uppercase mb-3">Built For Every Student Touchpoint</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-secondary">One Platform, Multiple Use Cases</h2>
           </div>
         </FadeInUp>
 
-        {/* Testimonial */}
-        <FadeInUp delay={0.2}>
-          <div className="max-w-4xl mx-auto relative">
-            <div className="absolute top-0 left-0 text-8xl text-orange-100 font-serif -translate-x-1/2 -translate-y-1/3 select-none animate-scale-in animate-delay-300">
-              "
-            </div>
-            <p className="text-2xl md:text-3xl font-light text-slate-700 italic relative z-10 leading-relaxed">
-              Jiffy transformed how we handle student queries. The accuracy is unmatched.
-            </p>
-            <p className="mt-6 font-bold text-secondary text-sm uppercase tracking-wide">- University Administrator</p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {/* Admissions */}
+          <FadeInUp delay={0.1}>
+            <a href="/resources/prospective-student-engagement" className="group block h-full">
+              <Card className="h-full flex flex-col bg-linear-to-br from-orange-50 to-amber-50 border-orange-200 hover:border-primary transition-all duration-300 hover:shadow-xl hover:shadow-orange-100/50">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-12 h-12 rounded-xl bg-linear-to-br from-primary to-amber-500 flex items-center justify-center text-white font-bold text-xl">
+                    A
+                  </div>
+                  <h3 className="text-xl font-bold text-secondary">Admissions</h3>
+                </div>
+                <p className="text-slate-600 leading-relaxed mb-4 flex-grow">
+                  Engage prospective students 24/7 with instant answers about applications, scholarships, and campus life.
+                </p>
+                <div className="text-sm font-medium text-primary group-hover:text-orange-600 flex items-center gap-2 mt-auto">
+                  Learn more <span className="group-hover:translate-x-1 transition-transform">→</span>
+                </div>
+              </Card>
+            </a>
+          </FadeInUp>
+
+          {/* Student Support */}
+          <FadeInUp delay={0.2}>
+            <a href="/resources/student-support-automation" className="group block h-full">
+              <Card className="h-full flex flex-col bg-linear-to-br from-warm-50 to-orange-50 border-slate-200 hover:border-primary transition-all duration-300 hover:shadow-xl hover:shadow-orange-100/50">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-12 h-12 rounded-xl bg-linear-to-br from-orange-600 to-amber-600 flex items-center justify-center text-white font-bold text-xl">
+                    S
+                  </div>
+                  <h3 className="text-xl font-bold text-secondary">Student Support</h3>
+                </div>
+                <p className="text-slate-600 leading-relaxed mb-4 flex-grow">
+                  Reduce support requests by 60%+ with accurate answers to financial aid, registration, and campus services.
+                </p>
+                <div className="text-sm font-medium text-primary group-hover:text-orange-600 flex items-center gap-2 mt-auto">
+                  Learn more <span className="group-hover:translate-x-1 transition-transform">→</span>
+                </div>
+              </Card>
+            </a>
+          </FadeInUp>
+
+          {/* IT Help Desk */}
+          <FadeInUp delay={0.3}>
+            <a href="/resources/chatbots-vs-faq-pages" className="group block h-full">
+              <Card className="h-full flex flex-col bg-linear-to-br from-amber-50 to-warm-50 border-amber-200 hover:border-primary transition-all duration-300 hover:shadow-xl hover:shadow-orange-100/50">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-12 h-12 rounded-xl bg-linear-to-br from-amber-600 to-orange-500 flex items-center justify-center text-white font-bold text-xl">
+                    IT
+                  </div>
+                  <h3 className="text-xl font-bold text-secondary">IT Help Desk</h3>
+                </div>
+                <p className="text-slate-600 leading-relaxed mb-4 flex-grow">
+                  Handle password resets, account issues, and campus tech support at scale with instant resolutions.
+                </p>
+                <div className="text-sm font-medium text-primary group-hover:text-orange-600 flex items-center gap-2 mt-auto">
+                  Learn more <span className="group-hover:translate-x-1 transition-transform">→</span>
+                </div>
+              </Card>
+            </a>
+          </FadeInUp>
+        </div>
+
+        {/* Good Faith Labs credit */}
+        <FadeInUp delay={0.4}>
+          <div className="flex justify-center items-center gap-3 mt-16">
+            <GiraffeMascot size={32} />
+            <span className="text-sm text-slate-500">Built by <span className="font-bold text-secondary">Good Faith Labs</span></span>
           </div>
         </FadeInUp>
       </section>

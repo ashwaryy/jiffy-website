@@ -28,9 +28,61 @@ export default function Resources() {
 
       {/* Resource Cards */}
       <section className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          {/* White Paper */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {/* Student Support Guide */}
           <FadeInUp delay={0.1}>
+            <div className="transition-lift h-full">
+              <Card className="flex flex-col h-full hover:border-blue-300/50 transition-all duration-300 bg-white hover:shadow-xl hover:shadow-blue-100/30">
+                <div className="mb-4 flex items-center gap-2">
+                  <span className="bg-gradient-to-r from-blue-100 to-indigo-100 text-blue-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
+                    Complete Guide
+                  </span>
+                </div>
+                <h3 className="text-2xl font-bold text-secondary mb-3">The Complete Guide to Student Support Automation</h3>
+                <p className="text-slate-600 mb-6 grow leading-relaxed">
+                  How universities use AI to deliver 24/7 student support, reduce tickets by 60%+, and improve satisfaction—without expanding staff.
+                </p>
+                <div className="flex items-center justify-between mt-auto pt-4 border-t border-slate-100">
+                  <span className="text-xs font-medium text-slate-400 uppercase tracking-wider flex items-center gap-2">
+                    <DocumentIcon size={14} />
+                    15-minute read
+                  </span>
+                  <Button href="/resources/student-support-automation" variant="outline" className="text-sm px-4 py-2 bg-transparent hover:bg-blue-50">
+                    Read Guide
+                  </Button>
+                </div>
+              </Card>
+            </div>
+          </FadeInUp>
+
+          {/* Prospective Student Guide */}
+          <FadeInUp delay={0.2}>
+            <div className="transition-lift h-full">
+              <Card className="flex flex-col h-full hover:border-purple-300/50 transition-all duration-300 bg-white hover:shadow-xl hover:shadow-purple-100/30">
+                <div className="mb-4 flex items-center gap-2">
+                  <span className="bg-gradient-to-r from-purple-100 to-indigo-100 text-purple-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
+                    Admissions Guide
+                  </span>
+                </div>
+                <h3 className="text-2xl font-bold text-secondary mb-3">How AI Transforms Prospective Student Engagement</h3>
+                <p className="text-slate-600 mb-6 grow leading-relaxed">
+                  How universities use AI and analytics to engage prospects 24/7, improve yield rates, and uncover competitive intelligence.
+                </p>
+                <div className="flex items-center justify-between mt-auto pt-4 border-t border-slate-100">
+                  <span className="text-xs font-medium text-slate-400 uppercase tracking-wider flex items-center gap-2">
+                    <DocumentIcon size={14} />
+                    14-minute read
+                  </span>
+                  <Button href="/resources/prospective-student-engagement" variant="outline" className="text-sm px-4 py-2 bg-transparent hover:bg-purple-50">
+                    Read Guide
+                  </Button>
+                </div>
+              </Card>
+            </div>
+          </FadeInUp>
+
+          {/* White Paper */}
+          <FadeInUp delay={0.3}>
             <div className="transition-lift h-full">
               <Card className="flex flex-col h-full hover:border-primary/50 transition-all duration-300 bg-white hover:shadow-xl hover:shadow-orange-100/30">
                 <div className="mb-4 flex items-center gap-2">
@@ -57,7 +109,7 @@ export default function Resources() {
           </FadeInUp>
 
           {/* Case Study */}
-          <FadeInUp delay={0.2}>
+          <FadeInUp delay={0.4}>
             <div className="transition-lift h-full">
               <Card className="flex flex-col h-full hover:border-green-300/50 transition-all duration-300 bg-white hover:shadow-xl hover:shadow-green-100/30">
                 <div className="mb-4">
@@ -77,6 +129,32 @@ export default function Resources() {
                   </span>
                   <Button href="/resources/case-study" variant="outline" className="text-sm px-4 py-2 bg-transparent hover:bg-green-50">
                     Read Case Study
+                  </Button>
+                </div>
+              </Card>
+            </div>
+          </FadeInUp>
+
+          {/* Chatbots vs FAQ Comparison */}
+          <FadeInUp delay={0.5}>
+            <div className="transition-lift h-full">
+              <Card className="flex flex-col h-full hover:border-teal-300/50 transition-all duration-300 bg-white hover:shadow-xl hover:shadow-teal-100/30">
+                <div className="mb-4">
+                  <span className="bg-gradient-to-r from-teal-100 to-cyan-100 text-teal-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
+                    Comparison
+                  </span>
+                </div>
+                <h3 className="text-2xl font-bold text-secondary mb-3">AI Chatbots vs. FAQ Pages: What Actually Reduces Inquiries</h3>
+                <p className="text-slate-600 mb-6 grow leading-relaxed">
+                  A practical comparison of static FAQ pages and AI chatbots for reducing support volume—with data on what actually works.
+                </p>
+                <div className="flex items-center justify-between mt-auto pt-4 border-t border-slate-100">
+                  <span className="text-xs font-medium text-slate-400 uppercase tracking-wider flex items-center gap-2">
+                    <DocumentIcon size={14} />
+                    10-minute read
+                  </span>
+                  <Button href="/resources/chatbots-vs-faq-pages" variant="outline" className="text-sm px-4 py-2 bg-transparent hover:bg-teal-50">
+                    Read Comparison
                   </Button>
                 </div>
               </Card>

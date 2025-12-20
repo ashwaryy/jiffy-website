@@ -3,19 +3,33 @@ import Link from "next/link";
 import { GiraffeMascot } from "./icons";
 
 export default function Footer() {
-  const links = [
-    { label: "Home", href: "/" },
+  const productLinks = [
     { label: "How It Works", href: "/how-it-works" },
     { label: "Analytics", href: "/analytics" },
-    { label: "Resources", href: "/resources" },
+    { label: "Pricing", href: "/pricing" },
     { label: "Request Demo", href: "/demo" },
   ];
 
+  const resourceLinks = [
+    { label: "Student Support Guide", href: "/resources/student-support-automation" },
+    { label: "Prospective Student Engagement", href: "/resources/prospective-student-engagement" },
+    { label: "Chatbots vs FAQ Pages", href: "/resources/chatbots-vs-faq-pages" },
+    { label: "ICA vs RAG White Paper", href: "/resources/white-paper" },
+    { label: "Analytics Case Study", href: "/resources/case-study" },
+  ];
+
+  const useCaseLinks = [
+    { label: "Admissions", href: "/resources/prospective-student-engagement" },
+    { label: "Student Support", href: "/resources/student-support-automation" },
+    { label: "IT Help Desk", href: "/resources/chatbots-vs-faq-pages" },
+  ];
+
   return (
-    <footer className="bg-linear-to-b from-warm-50 to-amber-50/50 border-t border-amber-100/50 py-12 mt-auto">
+    <footer className="bg-linear-to-b from-warm-50 to-amber-50/50 border-t border-amber-100/50 py-16 mt-auto">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div className="col-span-1 md:col-span-1">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12">
+          {/* Brand */}
+          <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-2 text-2xl font-bold text-secondary mb-4 tracking-tight group">
               <div>
                 <GiraffeMascot size={32} />
@@ -37,10 +51,11 @@ export default function Footer() {
             </p>
           </div>
 
-          <div className="col-span-1 md:col-span-2">
-            <h3 className="text-secondary font-semibold mb-4 text-sm uppercase tracking-wider">Navigation</h3>
-            <ul className="space-y-3">
-              {links.map((link, index) => (
+          {/* Product */}
+          <div>
+            <h3 className="text-secondary font-semibold mb-4 text-sm uppercase tracking-wider">Product</h3>
+            <ul className="space-y-2">
+              {productLinks.map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} className="text-slate-500 hover:text-primary transition-colors text-sm inline-flex items-center gap-1 group">
                     <span className="w-0 h-0.5 bg-primary transition-all duration-200 group-hover:w-2" />
@@ -51,15 +66,33 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="col-span-1">
-            <h3 className="text-secondary font-semibold mb-4 text-sm uppercase tracking-wider">Legal</h3>
-            <ul className="space-y-3">
-              <li>
-                <span className="text-slate-400 text-sm cursor-not-allowed">Privacy Policy</span>
-              </li>
-              <li>
-                <span className="text-slate-400 text-sm cursor-not-allowed">Terms of Service</span>
-              </li>
+          {/* Use Cases */}
+          <div>
+            <h3 className="text-secondary font-semibold mb-4 text-sm uppercase tracking-wider">Use Cases</h3>
+            <ul className="space-y-2">
+              {useCaseLinks.map((link) => (
+                <li key={link.href}>
+                  <Link href={link.href} className="text-slate-500 hover:text-primary transition-colors text-sm inline-flex items-center gap-1 group">
+                    <span className="w-0 h-0.5 bg-primary transition-all duration-200 group-hover:w-2" />
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Resources */}
+          <div className="lg:col-span-2">
+            <h3 className="text-secondary font-semibold mb-4 text-sm uppercase tracking-wider">Resources</h3>
+            <ul className="space-y-2">
+              {resourceLinks.map((link) => (
+                <li key={link.href}>
+                  <Link href={link.href} className="text-slate-500 hover:text-primary transition-colors text-sm inline-flex items-center gap-1 group">
+                    <span className="w-0 h-0.5 bg-primary transition-all duration-200 group-hover:w-2" />
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
