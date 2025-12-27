@@ -7,7 +7,7 @@ import { generatePageMetadata } from "../../lib/seo";
 
 export const metadata: Metadata = generatePageMetadata({
   title: "Pricing",
-  description: "Transparent, usage-based pricing starting from $5/month. No hidden fees, no markup on AI costs. Start with a free evaluation period.",
+  description: "Transparent, usage-based pricing starting from $10/month. No hidden fees, no markup on AI costs. Start with a free evaluation period.",
   path: "/pricing",
 });
 
@@ -106,7 +106,7 @@ export default function Pricing() {
               <div className="mb-4">
                 <span className="text-sm text-slate-500">Starting from</span>
                 <div className="flex items-baseline gap-1">
-                  <span className="text-4xl font-bold text-secondary">$5</span>
+                  <span className="text-4xl font-bold text-secondary">$10</span>
                   <span className="text-slate-500">/month</span>
                 </div>
               </div>
